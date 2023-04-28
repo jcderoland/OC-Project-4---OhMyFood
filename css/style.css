@@ -1,4 +1,19 @@
-/* Small devices (phones, less than 768px) */
+/* SCREEN SIZE REFERENCES:
+320px — 480px for mobile devices, 
+481px — 768px for iPads & tablets, 
+769px — 1024px for small screens like laptop, 
+1025px — 1200px for large screens like Desktops, 
+and 1201px and above for extra large screens like TV.
+
+Le site est responsive : 
+il s’affiche sans perte d’information et sans barre de défilement
+horizontale sur les différentes tailles
+Smartphone, tablette, écran de portable,
+écran fixe (au moins jusqu’à une résolution de 1920x1080).
+
+ */
+
+/* MOBILE DEVICES - 320px — 480px for */
 
 /* GENERAL */
 
@@ -110,8 +125,13 @@ header {
   padding: 40px;
   margin: 8px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+}
+
+.buttons-fonctionnement .fa-solid {
+  position: absolute;
+  left: 15%;
 }
 
 .fa-store {
@@ -145,6 +165,7 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   margin: 10px;
   height: auto;
+  background-color: white;
 }
 
 .card img {
@@ -170,6 +191,11 @@ header {
   font-weight: bold;
   font-size: 0.8rem;
   background-color: #99e2d0;
+}
+
+.restaurants button {
+  border: none;
+  background-color: white;
 }
 
 .restaurants .fa-heart {
