@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* SCREEN SIZE REFERENCES:
 320px — 480px for mobile devices, 
 481px — 768px for iPads & tablets, 
@@ -13,7 +12,22 @@ Smartphone, tablette, écran de portable,
 écran fixe (au moins jusqu’à une résolution de 1920x1080).
 
 */
+
+// VARIABLES & MIXIN
+
+$violet-primary: #9356dc ;
+$pink-primary: #ff79da ;
+
+$color-btn-like: linear-gradient(to top right, $pink-primary, $violet-primary);
+$color-btn-secundary: linear-gradient(to bottom right, $pink-primary, $violet-primary);
+
+@mixin btn-bg {
+  background: linear-gradient(to bottom right, $pink-primary, $violet-primary);
+}
+
 /* MOBILE DEVICES - 320px — 480px for */
+// LOADER
+
 .loader {
   text-align: center;
   position: fixed;
@@ -21,23 +35,19 @@ Smartphone, tablette, écran de portable,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #9356dc;
+  background-color: $violet-primary;
   animation-name: fadeOut;
   animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
 @keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+  from {opacity: 1;}
+  to {opacity: 0; visibility: hidden;}
 }
+
 .loader img {
-  scale: 1.8;
+  scale: 1.8 ;
   padding: 200px 50px 50px 50px;
 }
 
@@ -47,7 +57,9 @@ Smartphone, tablette, écran de portable,
   text-align: center;
 }
 
+
 /* GENERAL */
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -72,13 +84,16 @@ a :visited {
   cursor: pointer;
 }
 
+
 /* HEADER */
+
 header,
 main {
   text-align: center;
 }
 
 /* SECTION LOCATION  */
+
 .location {
   background-color: #eaeaea;
   font-weight: bold;
@@ -95,6 +110,7 @@ main {
 }
 
 /* SECTION TITLE MENU  */
+
 .title-menu,
 .fonctionnement button,
 .restaurants {
@@ -108,7 +124,7 @@ header {
 .title-menu {
   padding: 40px 25px;
   font-size: 1.1rem;
-}
+ }
 
 .title-menu p {
   color: #353535;
@@ -122,15 +138,18 @@ header {
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  background: linear-gradient(to top right, #ff79da, #9356dc);
-  transition: background 1000ms, box-shadow 1000ms;
-}
-.title-menu button:hover {
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  background: $color-btn-like;
+  transition: background 1000ms , box-shadow 1000ms ;
+  
+&:hover {
+  background: $color-btn-secundary;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
+  }
 }
 
+
 /* SECTION FONCTIONNEMENT  */
+
 .fonctionnement,
 .restaurants {
   padding: 30px 10px 70px 10px;
@@ -163,20 +182,21 @@ header {
   justify-content: center;
   align-items: center;
   transition: background-color 300ms, box-shadow 300ms;
+  &:hover {
+    background-color: #fafafa;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5)
 }
-.buttons-fonctionnement button:hover {
-  background-color: #fafafa;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .buttons-fonctionnement .fa-solid {
   position: absolute;
   left: 15%;
   color: #7e7e7e;
+  &:hover {
+    color: $violet-primary;
+  }
 }
-.buttons-fonctionnement .fa-solid:hover {
-  color: #9356dc;
-}
+
 
 .buttons-fonctionnement span {
   color: white;
@@ -185,13 +205,15 @@ header {
   font-weight: normal;
   position: absolute;
   left: 2%;
-  background: #9356dc;
+  background: $violet-primary;
   border-radius: 20px;
   padding: 8px;
   line-height: 0.9rem;
 }
 
+
 /* SECTION RESTAURANTS */
+
 .card {
   display: flex;
   flex-direction: column;
@@ -201,11 +223,10 @@ header {
   margin: 10px;
   height: auto;
   background-color: white;
-}
+ }
 
 .card img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 200px;
   border-radius: 5% 5% 0 0;
 }
@@ -235,22 +256,24 @@ header {
 }
 
 .restaurants .fa-heart {
-  font-size: 1.5rem;
-  transition: transform 100ms, font-weight 1000ms, color 600ms;
-}
-.restaurants .fa-heart:hover {
+    font-size: 1.5rem;
+    transition: transform 100ms , font-weight 1000ms , color 600ms;
+ &:hover {
   transform: scale(1.05);
-  color: #9356dc;
+  color: $violet-primary;
   font-weight: 700;
+   }
 }
 
+
+
 /* FOOTER  */
+
 footer {
   background-color: #353535;
   color: white;
   padding: 20px;
 }
-
 footer img {
   filter: invert(1);
 }
@@ -266,4 +289,4 @@ footer i {
 
 footer p {
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+}
