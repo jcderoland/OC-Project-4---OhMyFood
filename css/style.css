@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SCREEN SIZE REFERENCES:
 320px — 480px for mobile devices, 
 481px — 768px for iPads & tablets, 
@@ -12,11 +13,41 @@ Smartphone, tablette, écran de portable,
 écran fixe (au moins jusqu’à une résolution de 1920x1080).
 
  */
-
 /* MOBILE DEVICES - 320px — 480px for */
+.loader {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #9356dc;
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loader img {
+  scale: 1.8;
+  padding: 200px 50px 50px 50px;
+}
+
+.loader i {
+  padding: 50px;
+  font-size: 6rem;
+  text-align: center;
+}
 
 /* GENERAL */
-
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -38,17 +69,16 @@ a,
 a :visited {
   color: initial;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* HEADER */
-
 header,
 main {
   text-align: center;
 }
 
 /* SECTION LOCATION  */
-
 .location {
   background-color: #eaeaea;
   font-weight: bold;
@@ -65,7 +95,6 @@ main {
 }
 
 /* SECTION TITLE MENU  */
-
 .title-menu,
 .fonctionnement button,
 .restaurants {
@@ -89,14 +118,19 @@ header {
   color: white;
   padding: 15px;
   margin-top: 10px;
+  cursor: pointer;
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: #9356dc;
+  transition: background-color 1000ms, box-shadow 1000ms;
+}
+.title-menu button:hover {
+  background-color: #ff79da;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* SECTION FONCTIONNEMENT  */
-
 .fonctionnement,
 .restaurants {
   padding: 30px 10px 70px 10px;
@@ -112,10 +146,11 @@ header {
 .buttons-fonctionnement {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .buttons-fonctionnement button {
-  width: 90%;
+  width: 95%;
   height: 60px;
   font-weight: bold;
   font-size: 1.05rem;
@@ -127,6 +162,11 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 300ms, box-shadow 300ms;
+}
+.buttons-fonctionnement button:hover {
+  background-color: #fafafa;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .buttons-fonctionnement .fa-solid {
@@ -156,7 +196,6 @@ header {
 }
 
 /* SECTION RESTAURANTS */
-
 .card {
   display: flex;
   flex-direction: column;
@@ -169,7 +208,8 @@ header {
 }
 
 .card img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 200px;
   border-radius: 5% 5% 0 0;
 }
@@ -200,19 +240,21 @@ header {
 
 .restaurants .fa-heart {
   font-size: 1.5rem;
+  transition: transform 100ms, font-weight 1000ms, color 600ms;
 }
-
-.restaurants .fa-solid {
+.restaurants .fa-heart:hover {
+  transform: scale(1.05);
   color: #9356dc;
+  font-weight: 700;
 }
 
 /* FOOTER  */
-
 footer {
   background-color: #353535;
   color: white;
   padding: 20px;
 }
+
 footer img {
   filter: invert(1);
 }
@@ -225,3 +267,7 @@ footer img {
 footer i {
   margin-right: 5px;
 }
+
+footer p {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

@@ -19,6 +19,16 @@
   </head>
 
   <body>
+    <div class="loader">
+      <img
+      id="logo-loader"
+      src="images/logo/ohmyfood@2x.svg"
+      alt="logo ohMyFood svg"
+    />
+ <p>
+      <i class="fa fa-spinner fa-spin"></i>
+    </p>
+    </div>
     <div class="main-container">
       <header>
         <img
@@ -37,33 +47,30 @@
           <p>
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
           </p>
-          <button class="button-explorer">Explorer nos restaurants</button>
+          <button class="button-explorer" onclick="location.href='#restaurants'">Explorer nos restaurants</button>
         </section>
         <section class="fonctionnement">
           <h1>Fonctionnement</h1>
           <div class="buttons-fonctionnement">
-            <div>
               <button>
                 <span>1</span>
                 <i class="fa-solid fa-mobile-screen-button"></i>Choisissez un
                 restaurant
               </button>
-            </div>
-            <div>
               <button>
                 <span>2</span>
                 <i class="fa-solid fa-list"></i>Composez votre menu
               </button>
-            </div>
-            <div>
               <button>
                 <span>3</span>
                 <i class="fa-solid fa-store"></i>Dégustez au restaurant
               </button>
             </div>
+           
+
           </div>
         </section>
-        <section class="restaurants">
+        <section class="restaurants" id="restaurants">
           <h1>Restaurants</h1>
           <a href="#">
             <article class="card">
@@ -78,9 +85,8 @@
                   <p class="card-subtitle">Ménilmontant</p>
                 </div>
                 <button>
-                  <i class="fa-regular fa-heart"></i>
-                </button>
-              </div>
+                  <i class="fa-regular fa-heart"></i></button>
+            </div>
             </article>
           </a>
           <a href="#">
@@ -96,8 +102,8 @@
                   <p class="card-subtitle">Charonne</p>
                 </div>
                 <button>
-                  <i class="fa-solid fa-heart"></i>
-                </button>
+                  <i class="fa-regular fa-heart"></i>
+                 </button>
               </div>
             </article>
           </a>
