@@ -402,12 +402,10 @@ footer p {
 position: relative;
 display: flex;
 justify-content: space-between;
-padding: 11px;
 margin: 10px 0;
 background-color: white;
 border-radius: 15px;
 border: none;
-text-overflow:ellipsis;
 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 transition: background-color 300ms, box-shadow 300ms;
   &:hover {
@@ -490,6 +488,7 @@ width: 100%;
 
 .menu-restaurant h5 {
   margin: 0;
+  padding: 5px;
   text-align: left;
   font-weight: 600;
   font-size: 1.1rem;
@@ -499,6 +498,7 @@ width: 100%;
 }
 
 .menu-restaurant p {
+  padding: 5px;
   margin: 4px 0 0 0;
   font-size: 0.9rem;
   font-weight: lighter;
@@ -508,6 +508,7 @@ width: 100%;
 }
 
 .menu-restaurant span {
+  padding: 5px;
   font-size: 0.9rem;
   font-weight: bold;
   color: #353535;
@@ -515,58 +516,40 @@ width: 100%;
 
 .column-circle-check {
   width: 0%;
-  transition: all 600ms ease-in-out;
+  transition: all 400ms ease-in-out;
   background-color: #99e2d0;
+  margin: 0;
+  padding: 0;
+  height: 62px;
+  box-sizing: border-box;
   }
 
 
 .card-menu:hover .column-circle-check{
   display: flex;
-  width: 10%;
-  transform: scale(1.5);
+  align-items: center;
+  width: 60px ;
   background-color: #99e2d0;
   position: relative;
- margin-left: 20px;
- border-radius: 0 10px 10px 0;
+  border-radius: 0 15px 15px 0;
  }
 
  .fa-circle-check {
-  display: none;
-  transition: transform 1000ms ease-in-out;
+  position: relative;
+  left: 15px;
+  opacity: 0;
+  font-size: 1.25rem ;
+  transition: opacity 500ms ease-in-out ;
   width: 0%;
+  color: transparent;
  }
 
  .card-menu:hover .fa-circle-check{
-display: initial;
-transform: scale(1.10);
-position: absolute;
-left: 30%;
-top: 30%;
+ opacity: 1;
 background-color: #99e2d0;
 color: white;
  }
 
-
-
-
-// .column-circle-check {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: #99e2d0;
-//   width: 59px;
-//   height: 69px;
-//   position: absolute;
-//   padding: 10px;
-//   right: -50px;
-//   top: 0;
-//   opacity: 0;
-//   transition-duration: 1s;
-//   &.fa-circle-check {
-//     color: #fff;
-//     transition: transform 600ms ease-in-out;
-//   }
-// }
  
 .bottom-button {
   background-color: #f7f7f7 ;
@@ -577,19 +560,30 @@ color: white;
   margin: 0 0 40px 0;
   font-size: 1rem;
     }
-  
 
+    // @media (max-width: 400px) {
+    //   .menu-restaurant h5 {
+    //     max-width: 60vw;
+    //   }
+    //   .menu-restaurant p {
+    //     max-width: 40vw;
+    //   }
+    // }
+
+    
 
    @media (max-width: 230px) {
   html {
     font-size: 0.9em;
   } 
+
   }
 
   @media (max-width: 200px) {
     html {
       font-size: 0.8em;
     } 
+
     }
 
  @media (min-width: 769px) {
