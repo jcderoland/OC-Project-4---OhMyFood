@@ -530,9 +530,23 @@ footer p {
   font-size: 1rem;
 }
 
+@media (max-width: 400px) {
+  .menu-restaurant h5 {
+    max-width: 50vw;
+  }
+  .menu-restaurant p {
+    max-width: 40vw;
+  }
+}
 @media (max-width: 230px) {
   html {
     font-size: 0.9em;
+  }
+  .menu-restaurant h5 {
+    max-width: 50vw;
+  }
+  .menu-restaurant p {
+    max-width: 30vw;
   }
 }
 @media (max-width: 200px) {
