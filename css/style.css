@@ -457,7 +457,6 @@ footer p {
   align-items: center;
   line-height: 1rem;
   width: 100%;
-  text-overflow: ellipsis;
 }
 
 .menu-restaurant h5 {
@@ -465,12 +464,18 @@ footer p {
   text-align: left;
   font-weight: 600;
   font-size: 1.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-restaurant p {
   margin: 4px 0 0 0;
   font-size: 0.9rem;
   font-weight: lighter;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-restaurant span {
