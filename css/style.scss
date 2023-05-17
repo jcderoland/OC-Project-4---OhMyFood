@@ -488,7 +488,7 @@ width: 100%;
 
 .menu-restaurant h5 {
   margin: 0;
-  padding: 5px;
+  padding: 10px 5px 0 9px;
   text-align: left;
   font-weight: 600;
   font-size: 1.1rem;
@@ -500,7 +500,7 @@ width: 100%;
 
 
 .menu-restaurant p {
-  padding: 5px;
+  padding: 0 5px 5px 9px;
   margin: 4px 0 0 0;
   font-size: 0.9rem;
   font-weight: lighter;
@@ -510,7 +510,7 @@ width: 100%;
 }
 
 .menu-restaurant span {
-  padding: 5px;
+  padding: 0 15px 0 0;
   font-size: 0.9rem;
   font-weight: bold;
   color: #353535;
@@ -596,6 +596,10 @@ color: white;
     }
 
  @media (min-width: 769px) {
+
+  #logo-top {
+    width: 200px;
+  }
 
 .buttons-fonctionnement {
   flex-direction: row;
