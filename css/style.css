@@ -38,7 +38,7 @@ Smartphone, tablette, écran de portable,
   }
 }
 .loader img {
-  scale: 1.8;
+  transform: scale(1.8);
   padding: 200px 50px 50px 50px;
 }
 
@@ -139,7 +139,8 @@ header {
   color: #353535;
 }
 
-.title-menu button, .button-commander {
+.title-menu button,
+.button-commander {
   color: white;
   padding: 15px;
   margin-top: 10px;
@@ -151,7 +152,8 @@ header {
   transition: all 1000ms;
   max-width: 180px;
 }
-.title-menu button:hover, .button-commander:hover {
+.title-menu button:hover,
+.button-commander:hover {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -241,7 +243,7 @@ header {
 
 .card img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 200px;
   border-radius: 15px 15px 0 0;
 }
@@ -282,7 +284,7 @@ header {
 .fa-heart {
   color: white;
   font-size: 1.5rem;
-  background-image: linear-gradient(#FF79DA 0%, #9356DC 60%);
+  background-image: linear-gradient(#ff79da 0%, #9356dc 60%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-stroke: 2px black;
@@ -325,7 +327,7 @@ footer p {
   width: 100%;
   height: 350px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .restaurant-and-heart {
@@ -367,7 +369,7 @@ footer p {
 
 .menu-restaurant hr {
   border: 0px;
-  border-top: #99E2D0 3px solid;
+  border-top: #99e2d0 3px solid;
   width: 12%;
   margin: 0;
 }
@@ -592,4 +594,4 @@ footer p {
     order: 5;
     padding-left: 7%;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
