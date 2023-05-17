@@ -38,7 +38,7 @@ Smartphone, tablette, écran de portable,
   }
 }
 .loader img {
-  transform: scale(1.8);
+  scale: 1.8;
   padding: 200px 50px 50px 50px;
 }
 
@@ -62,6 +62,7 @@ body {
 
 h1 {
   font-weight: bold;
+  margin-left: 40px;
 }
 
 h2 {
@@ -82,6 +83,7 @@ a :visited {
 /* HEADER */
 #logo-top {
   width: 165px;
+  padding-bottom: 15px;
 }
 
 header {
@@ -132,15 +134,14 @@ header {
 
 .title-menu {
   padding: 40px 25px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .title-menu p {
   color: #353535;
 }
 
-.title-menu button,
-.button-commander {
+.title-menu button, .button-commander {
   color: white;
   padding: 15px;
   margin-top: 10px;
@@ -152,8 +153,7 @@ header {
   transition: all 1000ms;
   max-width: 180px;
 }
-.title-menu button:hover,
-.button-commander:hover {
+.title-menu button:hover, .button-commander:hover {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -243,7 +243,7 @@ header {
 
 .card img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   height: 200px;
   border-radius: 15px 15px 0 0;
 }
@@ -284,7 +284,7 @@ header {
 .fa-heart {
   color: white;
   font-size: 1.5rem;
-  background-image: linear-gradient(#ff79da 0%, #9356dc 60%);
+  background-image: linear-gradient(#FF79DA 0%, #9356DC 60%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-stroke: 2px black;
@@ -316,7 +316,7 @@ footer img {
 }
 
 footer i {
-  margin-right: 5px;
+  margin-right: 1vw;
 }
 
 footer p {
@@ -327,7 +327,7 @@ footer p {
   width: 100%;
   height: 350px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .restaurant-and-heart {
@@ -369,7 +369,7 @@ footer p {
 
 .menu-restaurant hr {
   border: 0px;
-  border-top: #99e2d0 3px solid;
+  border-top: #99E2D0 3px solid;
   width: 12%;
   margin: 0;
 }
@@ -563,12 +563,13 @@ footer p {
   .buttons-fonctionnement {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 20px;
   }
   .buttons-fonctionnement button {
     position: relative;
     margin: 20px 20px 0 20px;
-    width: min(26vw, 380px);
+    width: min(26.5vw, 365px);
   }
   .card {
     width: min(40vw, 550px);
@@ -586,7 +587,7 @@ footer p {
   }
   .footer-menu {
     display: flex;
-    gap: 2%;
+    gap: 2.5%;
     justify-content: right;
     padding: 35px 30px 0 0;
   }
@@ -594,4 +595,4 @@ footer p {
     order: 5;
     padding-left: 7%;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
