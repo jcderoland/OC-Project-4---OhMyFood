@@ -49,7 +49,7 @@ $color-btn-secundary: linear-gradient(to bottom right, $pink-primary, $violet-pr
 }
 
 .loader img {
-  scale: 1.8 ;
+  transform: scale(1.8) ;
   padding: 200px 50px 50px 50px;
 }
 
